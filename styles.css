@@ -1,0 +1,139 @@
+@import "./styles/reset.css";
+@import "./styles/fonts.css";
+
+.container {
+    width: 100%;
+}
+
+.register-image{
+    display: none;
+}
+
+.register-form{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+h2 {
+    font-size: 26px;
+    line-height: 39px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group-label {
+    display: block;
+    margin-bottom: 5px;
+    color: #A7A3FF;
+    font-size: 15px;
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+input, select {
+    width: 100%;
+    max-width: 369px;    
+    padding: 20px 26px;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: #F0EFFF;
+    color: #A7A3FF;
+}
+
+input::placeholder {
+    color: #A7A3FF;
+} 
+
+option[value=""][disabled] {
+    display: none;
+}
+
+input:focus, select:focus, button:focus {
+    outline: none;
+    border-color: none;
+}
+
+button{
+    background-color: #4D47C3;
+    width: 100%;
+    max-width: 369px;    
+    padding: 18px;
+    border-radius: 9px;
+    font-size: 15px;
+    color: #FFFFFF;
+    box-shadow: 0px 4px 61px 0px rgba(77,71,195,0.4);
+    margin-top: 45px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Mensajes de error */
+.error-message {
+    color: #dc3545;
+    font-size: 14px;
+    display: none;
+}
+
+/* Estilos para campos con error */
+input.error, select.error {
+    border: 1px solid #dc3545;
+}
+
+/* Estilos para campos válidos */
+input.valid, select.valid {
+    border: 1px solid #28a745;
+}
+
+.registerForm-tyc {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    color: #A7A3FF;
+ }
+
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #A7A3FF;
+}
+
+.social-icons{
+    width: 165px;
+    height: 43.12px;
+}
+
+@media (min-width:1024px) {
+    .container {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .register-image {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: center;
+        width: 50%;
+    }
+
+    .register-image h1{
+        padding-right: 100px;
+    }
+
+    .register-image img {
+        width: 313px;
+        height: 556px;
+    }
+
+}

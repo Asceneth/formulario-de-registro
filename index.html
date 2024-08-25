@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Validaciones</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="register-image">
+            <h1>Regístrate</h1>
+            <img src="./assets/register-image.png" alt="imagen de registro">
+        </div>
+        <div class="register-form">
+            <h2>Formulario de Registro</h2>
+            <form id="registroForm">
+                <!-- Nombre -->
+                <div class="form-group">
+                    <input type="text" id="nombre" placeholder="Nombre" name="nombre" required>
+                    <small class="error-message" id="nombreError"></small>
+                </div>
+
+                <!-- Correo Electrónico -->
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Correo Electrónico" name="email" required>
+                    <small class="error-message" id="emailError"></small>
+                </div>
+
+                <div class="form-group">
+                <select id="pais" name="pais">
+                    <option value="" disabled selected hidden>Pais </option>
+                    <option value="US">Estados Unidos</option>
+                    <option value="CA">Canadá</option>
+                    <option value="UK">Reino Unido</option>
+                    <option value="CO">Colombia</option>
+                    <option value="MX">México</option> 
+                </select>
+                </div>
+
+
+                <!-- Teléfono -->
+                <div class="form-group">
+                    <input type="tel" id="telefono" placeholder="Teléfono" name="telefono" required>
+                    <small class="error-message" id="telefonoError"></small>
+                </div>
+
+                <!-- Contraseña -->
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Contraseña" name="password" required>
+                    <small class="error-message" id="passwordError"></small>
+                </div>
+
+                <!-- Confirmar Contraseña -->
+                <div class="form-group">
+                    <input type="password" id="confirmPassword" placeholder="Confirmar Contraseña" name="confirmPassword" required>
+                    <small class="error-message" id="confirmPasswordError"></small>
+                </div>
+
+                <!-- Fecha de Nacimiento -->
+                <div class="form-group">
+                    <label class="form-group-label" for="fechaNacimiento">Fecha de Nacimiento:</label>
+                    <input type="date" id="fechaNacimiento" value="Fecha de nacimiento" name="fechaNacimiento" required>
+                    <small class="error-message" id="fechaNacimientoError"></small>
+                </div>
+
+                <!-- Género -->
+                <div class="form-group">
+                    <select id="genero" name="genero" required>
+                        <option value="" disabled selected hidden>Género </option>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                    <small class="error-message" id="generoError"></small>
+                </div>
+
+                <!-- Acepto los términos y condiciones -->
+                <div class="form-group">
+                    <label class="registerForm-tyc">
+                        <input type="checkbox" id="terminos" name="terminos" required>
+                        Acepto los términos y condiciones
+                    </label>
+                    <small class="error-message" id="terminosError"></small>
+                </div>
+
+                <!-- Botón de Enviar -->
+                <div class="form-group">
+                    <button type="submit" >Registrar</button>
+                </div>
+            </form>
+            <p>O continúa con</p>
+            <img src="./assets/social-icons.png" alt="iconos de redes sociales" class="social-icons">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
